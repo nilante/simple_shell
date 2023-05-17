@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <string.h>
 
-<<<<<<< HEAD
+ HEAD
 char *search_path(char *com)
 {
 char *path = getenv("PATH");
@@ -102,5 +102,4 @@ printf("\n");
 *  return : 0 success
 */
 return 0;
->>>>>>> 03f1979a937c88264df2b1ecfd54542db27ec6f2
 }

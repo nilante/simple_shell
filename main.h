@@ -17,6 +17,8 @@
 char *read_line(void);
 char **split_line(char *line);
 void execute_command(char **args);
+char com[BUFFER_SIZE];
+fprintf(stderr, "Command not found: %s\n", args[0]);
 
 #endif /* MAIN_H*/
 

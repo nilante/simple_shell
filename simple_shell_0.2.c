@@ -51,7 +51,7 @@ int status;
 waitpid(pid, &status, 0);
 if (status != 0)
 {
-printf("Command execution failed\n";
+printf("Command execution failed\n");
 }
 }
 }
