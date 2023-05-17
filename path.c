@@ -4,6 +4,33 @@
 #include <unistd.h>
 #include <string.h>
 
+<<<<<<< HEAD
+char *search_path(char *com)
+{
+char *path = getenv("PATH");
+char *x;
+/*fp:full path */
+char *fp;
+char *token;
+
+token = strtok(path, ":");
+while (token != NULL)
+{
+x = strdup(token);
+fp = malloc(strlen(dir) + strlen(command) + 2);
+sprintf(full_path, "%s/%s", dir, command);
+
+if (access(fp, F_OK) == 0)
+{
+free(x);
+return fp;
+}
+free(x);
+free(fp);
+token = strtok(NULL, ":");
+}
+return (0)
+=======
 #define BUFFER_SIZE 1024
 
 int main(void)
@@ -75,4 +102,5 @@ printf("\n");
 *  return : 0 success
 */
 return 0;
+>>>>>>> 03f1979a937c88264df2b1ecfd54542db27ec6f2
 }
