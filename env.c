@@ -1,29 +1,29 @@
 #include "main.h"
-void execute_command(char **args)
+void execute_com(char **args)
 {
     if (args[0] == NULL) {
-        // Empty command
+        /* Empty command*/
         return;
     }
 
     if (strcmp(args[0], "env") == 0) {
-        // Handle the "env" built-in command
+        /* Handle the "env" built-in command*/
         env_builtin();
     } else {
-        // Handle external commands
+        /* Handle external commands*/
         pid_t pid = fork();
 
         if (pid == 0) {
-            // Child process
+            /* Child process*/
             if (execvp(args[0], args) == -1) {
                 perror("execvp");
             }
             exit(EXIT_FAILURE);
         } else if (pid < 0) {
-            // Forking error
+            /* Forking error*/
             perror("fork");
         } else {
-            // Parent process
+            /* Parent process*/
             wait(NULL);
         }
     }
