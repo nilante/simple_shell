@@ -1,4 +1,9 @@
 #include "main.h"
+/*
+ * main - check the main function
+ * return: 0
+ */
+
 int main(void)
 {
 char *line;
