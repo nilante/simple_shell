@@ -4,8 +4,7 @@
 #include <unistd.h>
 #include <string.h>
 
- HEAD
-char *search_path(char *com)
+char *search_path(char *command)
 {
 char *path = getenv("PATH");
 char *x;
@@ -29,23 +28,23 @@ free(x);
 free(fp);
 token = strtok(NULL, ":");
 }
-return (0)
-=======
+return (0);
+
 #define BUFFER_SIZE 1024
 
 int main(void)
 {
-char com[BUFFER_SIZE];
+char command[BUFFER_SIZE];
 char p[] = "simple_shell> ";
 
 while (1) 
 {
 printf("%s", p);
-if (fgets(com, sizeof(com), stdin) == NULL)
-break;  // End of file (Ctrl+D) reached, exit the shell
+if (fgets(command, sizeof(command), stdin) == NULL)
+break;  /*  End of file (Ctrl+D) reached, exit the shell */
 
-// Remove the trailing newline character
-com[strcspn(com, "\n")] = '\0';
+/* Remove the trailing newline character*/
+command[strcspn(command, "\n")] = '\0';
 
 char *args[BUFFER_SIZE];
 int x = 0;

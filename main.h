@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+#define BUFFER_SIZE 1024;
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -13,12 +14,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-
+char command(BUFFER_SIZE);
 char *read_line(void);
 char **split_line(char *line);
 void execute_command(char **args);
-char com[BUFFER_SIZE];
 fprintf(stderr, "Command not found: %s\n", args[0]);
-char com[BUFFER_SIZE];
 #endif /* MAIN_H*/
 
